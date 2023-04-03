@@ -7,12 +7,18 @@ import Splash from './Splash';
 import Files from './Files';
 import Activity from './Activity';
 import MyFile from './MyFile';
-
+import Sidebar from './Sidebar';
+import 'react-native-gesture-handler'
 const RootNavigator = () => {
   return (
     <>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="first"
+            options={{headerShown: false}}
+            component={Sidebar}
+          />
           <Stack.Screen
             name="Splash"
             options={{headerShown: false}}
